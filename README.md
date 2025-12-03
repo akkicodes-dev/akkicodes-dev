@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>👨‍💻 Android Developer | Web3 Enthusiast | Community Leader</h3>
+  <h3>👨‍💻 Android Developer | DSA Enthusiast | Community Leader</h3>
   
   <a href="https://www.linkedin.com/in/akash-satao-a56011250/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
