@@ -1,0 +1,32 @@
+name: Generate Snake
+
+on:
+  # Har 24 ghante mein automatically chalega
+  schedule:
+    - cron: "0 0 * * *" 
+  
+  # Kabhi bhi manual run karne ke liye
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Snake Animation Generate karega
+      - uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # Generated Snake ko 'output' branch mein push karega
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
